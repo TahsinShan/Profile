@@ -1,137 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tahsin Hasan Shan</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tahsin Hasan Shan | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Navbar -->
 <header>
-  <nav class="navbar transparent" id="navbar">
-    <div class="logo"><a href="#home">Shan</a></div>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
+  <nav class="navbar">
+    <h1 class="logo">Tahsin Hasan Shan</h1>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#courses">Courses</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle">🌙</button>
   </nav>
 </header>
 
 <!-- Hero -->
-<section id="home" class="home">
-  <div class="hero-content">
-    <h1>Tahsin Hasan Shan</h1>
-    <p>Student • Developer • Tech Enthusiast</p>
+<section id="hero">
+  <div class="hero-container">
+    <h2>Hello, I’m <span>Tahsin Hasan Shan</span></h2>
+    <p>Developer, Innovator, and Social Impact Technologist</p>
+    <p>Creating sustainable and AI-driven solutions for real-world problems</p>
+    <a href="#projects" class="btn">Explore My Work</a>
   </div>
 </section>
 
 <!-- About -->
 <section id="about" class="section">
   <h2>About Me</h2>
-  <p>Hello! I’m <strong>Tahsin Hasan Shan</strong>, a curious mind who finds joy in building, exploring, and expressing. From writing code that brings ideas to life, to voicing thoughts through poetry, anchoring, and speeches — I believe in being both analytical and creative.</p>
-    
-    <p>As the Founder and General Secretary of the <strong>Savar Cantonment Public School and College IT Club</strong>, I’ve led a growing community of tech-enthusiasts while staying hands-on with my own projects — including a sustainability-driven smart street system and a Mars rover prototype. I also recently won the <strong>regional round of the National High School Programming Competition</strong>, and I continue to challenge myself through small experiments and meaningful collaborations.</p>
-    
-    <p>Many of my initiatives are inspired by real-world challenges — from pollution to energy use — with a focus on innovation that aligns with the <strong>UN Sustainable Development Goals (SDGs)</strong>. Whether it's developing eco-friendly solutions, diving into Python, or exploring how technology can uplift communities, I’m always eager to learn, grow, and contribute.</p>
-    
-    <p>At the heart of it all, I simply want to be the most <em>raw and pure version of Shan</em> — someone who builds, leads, and lives with purpose. As one of my favorite quotes goes:</p>
-    
-    <blockquote>
-      “The best way to predict the future is to invent it.”
-    </blockquote>
-</section>
-
-<!-- Education -->
-<section id="education" ">
-  <h2>Education</h2>
-  <div class="edu-item">
-    <h3>B.Sc. in Computer Science</h3>
-    <p>University of Example - 2019 to 2023</p>
-    <p>Graduated with Honors. Focused on Web Development, Data Structures, and Software Engineering.</p>
-  </div>
-  <div class="edu-item">
-    <h3>Higher Secondary Certificate (HSC)</h3>
-    <p>Example College - 2017 to 2019</p>
-    <p>Science Group - GPA: 5.00</p>
-  </div>
-</section>
-
-<!-- Skills -->
-<section id="skills" class="section alt">
-  <h2>Skills</h2>
-  <ul>
-    <li>Python (Strong)</li>
-    <li>HTML, CSS, JS (Basic)</li>
-    <li>Arduino Programming</li>
-    <li>Leadership & Communication</li>
-  </ul>
+  <p>
+    I am a highly motivated student and tech enthusiast from Savar, Dhaka, currently pursuing Higher Secondary Education (Science group). My passion lies in building technology-driven solutions for social good.
+  </p>
+  <p>
+    As the Founder and President of the <strong>Savar Cantonment Public School & College IT Club</strong>, I have led multiple initiatives, workshops, and competitions to promote coding, research, and innovation among students. I enjoy combining analytical skills with creativity, whether developing IoT projects, AI systems, or web applications.
+  </p>
+  <p>
+    My projects focus on real-world impact, from sustainable energy and smart systems to social welfare and AI solutions, aligning with the <strong>UN Sustainable Development Goals (SDGs)</strong>.
+  </p>
 </section>
 
 <!-- Projects -->
 <section id="projects" class="section">
-  <h2>Projects</h2>
-  <ul>
-    <li>🔌 Smart Street System (Arduino Uno)</li>
-    <li>🚀 Mars Rover Prototype</li>
-    <li>💻 20+ Python Mini Projects</li>
-    <li>🌐 Pangolin Website</li>
-  </ul>
-</section>
-<!-- Achievements -->
-<section id="achievements" class="section alt">
-  <h2>Achievements</h2>
-  <ul>
-    <li>Regional Winner – National High School Programming Contest</li>
-    <li> Multiple Speech & Poem Recitation Awards</li>
-    <li>Lead Organizer – SCPSC IT Club Events & Workshops</li>
-    <li> SSC Result – GPA 5.00</li>
-  </ul>
-</section>
+  <h2>Projects & Technical Work</h2>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>CropCare (AI & Web)</h3>
+      <p>
+        AI-powered platform for farmers to detect crop diseases and monitor plant health. Integrated custom-trained ML models and Flask backend, deployed via Render. Helps prevent crop losses and improves productivity.
+      </p>
+      <p><strong>Tech:</strong> Python, Flask, TensorFlow, HTML/CSS</p>
+      <a href="https://github.com/TahsinShan/CropCare" target="_blank">View GitHub</a>
+    </div>
 
-<!-- Courses -->
-<section id="courses" class="section">
-  <h2>Courses Completed</h2>
-  <ul>
-    <li>✔️ Python for Beginners – Coursera</li>
-    <li>✔️ Web Development Basics – freeCodeCamp</li>
-    <li>✔️ Arduino Programming & Electronics – YouTube Projects</li>
-    <li>✔️ Git & GitHub Essentials – Self Taught</li>
-  </ul>
-</section>
-<!-- Contact -->
-<section id="contact" class="section alt">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:tahsinhasanshan@gmail.com">tahsinhasanshan@gmail.com</a></p>
-  <p>Phone: +88 01816037877</p>
-  <div class="social-icons">
-    <a href="https://github.com/tahsinshan" target="_blank"><img src="assets/github-logo.png" height="48px" alt="GitHub"></a>
-    <a href="https://www.instagram.com/shan_udhao/" target="_blank"><img src="assets/instagram-removebg-preview.png" height="50px" alt="Instagram"></a>
-    <a href="https://www.facebook.com/shanudhao" target="_blank"><img src="assets/facebook_logo.png" height="55px"alt="Facebook"></a>
-    <a href="https://www.l" target="_blank"><img src="assets/linked.png" height="55px"alt="linked-in"></a>
-  </div>
-</section>
+    <div class="card">
+      <h3>ReCircle</h3>
+      <p>
+        Social welfare platform to redistribute surplus food and groceries within communities. Reduces food waste while supporting vulnerable populations through sustainable giving.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+    </div>
 
-<!-- Shan's Bot -->
-<div id="chatbot">
-  <div id="chat-header">
-    Shan's Bot 🧠
-    <span id="chat-close" title="Minimize">🗕</span>
-  </div>
-  <div id="chat-body"></div>
-  <input type="text" id="chat-input" placeholder="Ask me about Shan..." />
+    <div class="card">
+      <h3>BD OFC Website</h3>
+      <p>
+        Developed the official website for a non-profit advocating labour rights and greener industries. Enhanced donor engagement, transparency, and organizational visibility.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="card">
+      <h3>Advanced Smart Street System</h3>
+      <p>
+        IoT-based street system that captures black smoke, converts it into usable products (ink), and integrates solar energy and smart breakers to save electricity. Aligns with multiple UN SDGs.
+      </p>
+      <p><strong>Tech:</strong> Arduino, Sensors, IoT, Sustainability</p>
+    </div>
+
+    <div class="card">
+      <h3>Mars Rover Prototype</h3>
+      <p>
+        Designed and developed a functional rover prototype for terrain exploration and environmental data collection. Applied robotics and IoT concepts for real-world simulation.
+      </p>
+      <p><strong>Tech:</strong> Arduino, Sensors, Robotics</p>
+    </div>
+
+    <div class="card">
+      <h3>UniPortal</h3>
+      <p>
+        University department portal for academic resources and event coordination. Streamlined communication between students and faculty.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, Flask</p>
+    </div>
+
+    <div class="card">
+      <h3>Pangolin (Startup)</h3>
+      <p>
+        Co-founder and Chief Technology Officer(CTO) of a platform providing microfinance access, on-time wages, and ethical job opportunities for garment workers. Supported 200+ workers during layoffs in Narayanganj.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, Flask</p>
+    </div>
+
+    <div class="card">
+  <h3>SAT-ar-Matha (WebApp)</h3>
+  <p>
+    Created a web application for an organization that prepares students for the SAT exam, helping them manage teaching resources and track student progress efficiently as a gift to support their mission.
+  </p>
+  <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+  <a href="https://github.com/TahsinShan/SAT-ar-Matha" target="_blank">View Project</a>
+  <a href="https://sat-ar-matha.onrender.com/" target="_blank">Web App</a>
 </div>
 
-<!-- Bot Icon -->
-<div id="chat-icon" title="Chat with Shan's Bot">💬</div>
+  </div>
+</section>
+
+<!-- Leadership & Activities -->
+<section id="leadership" class="section">
+  <h2>Leadership & Activities</h2>
+  <ul>
+    <li>Founder & President, SCPSC IT Club – Organized workshops, coding sessions, inter-school competitions.</li>
+    <li>Public speaking and cultural engagement – Poems, speeches, anchoring, debates.</li>
+    <li>Regional Champion, National High School Programming Competition (2024).</li>
+    <li>Mentoring and coaching junior students in programming, IoT, and AI projects.</li>
+  </ul>
+</section>
+
+<!-- Research -->
+<section id="research" class="section">
+  <h2>Research Experience</h2>
+  <div class="research-grid">
+    <div class="card">
+      <h3>Quantum Computing Research – ISTARC</h3>
+      <p>
+        Explored quantum computing applications, documented findings in wall magazine, and achieved 1st Prize recognition by ISTARC. Focused on practical applications for computational problem solving.
+      </p>
+    </div>
+    <div class="card">
+      <h3>AI & Business Collaboration</h3>
+      <p>
+        Researching AI-powered customer service integration for e-commerce platforms. Projects include social impact solutions like food-sharing systems and automated donation platforms.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Awards -->
+<section id="awards" class="section">
+  <h2>Awards & Recognition</h2>
+  <ul>
+    <li>1st Prize, ISTARC Quantum Computing Research (2024)</li>
+    <li>Regional Winner, National High School Programming Competition (2024)</li>
+    <li>Special Innovator & All-Rounder Student Award (Cultural & Academic Achievements)</li>
+    <li>Multiple awards in public speaking, poem recitation, and debate</li>
+    <li>Recognition for sustainable and socially impactful tech projects</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:tahsinhasanshan@gmail.com">tahsinhasanshan@gmail.com</a></p>
+  <p><strong>Phone:</strong> +880 1816037877</p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/TahsinShan" target="_blank">github.com/TahsinShan</a></p>
+  <p><strong>Location:</strong> Savar, Dhaka-1340, Bangladesh</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Tahsin Hasan Shan | Built with purpose and passion</p>
+</footer>
 
 <script src="script.js"></script>
 </body>

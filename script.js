@@ -1,74 +1,28 @@
-// Hamburger Menu
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+// ==============================
+// DARK/LIGHT MODE TOGGLE
+// ==============================
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-// Chatbot logic
-const chatbot = document.getElementById("chatbot");
-const chatIcon = document.getElementById("chat-icon");
-const chatInput = document.getElementById("chat-input");
-const chatBody = document.getElementById("chat-body");
-const chatClose = document.getElementById("chat-close");
-
-function respond(input) {
-  const text = input.toLowerCase();
-  if (text.includes("name")) return "His name is Tahsin Hasan Shan.";
-  if (text.includes("school")) return "He’s from Savar Cantonment Public School & College.";
-  if (text.includes("projects")) return "He built a Mars rover, smart street system, and 20+ Python mini projects.";
-  if (text.includes("skills")) return "He knows Python, Arduino, HTML, CSS, JS.";
-  return "I'm Shan’s Bot! Ask me anything about him.";
+// Function to apply theme
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.textContent = '☀️';
+  } else {
+    body.classList.remove('dark-mode');
+    themeToggle.textContent = '🌙';
+  }
 }
 
-chatInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter" && chatInput.value.trim()) {
-    const msg = chatInput.value.trim();
-    chatBody.innerHTML += `<div><strong>You:</strong> ${msg}</div>`;
-    setTimeout(() => {
-      chatBody.innerHTML += `<div><strong>Bot:</strong> ${respond(msg)}</div>`;
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 300);
-    chatInput.value = "";
-  }
-});
+// Check saved theme on load
+let savedTheme = localStorage.getItem('theme') || 'light';
+applyTheme(savedTheme);
 
-// Show chatbot briefly on load
-window.addEventListener("load", () => {
-  chatbot.style.display = "flex";
-  chatIcon.style.display = "none";
-  chatBody.innerHTML = `<div><strong>Bot:</strong> Hey there! I'm here to help you learn more about Shan 😊</div>`;
-  setTimeout(() => {
-    chatbot.style.display = "none";
-    chatIcon.style.display = "block";
-  }, 6000);
-});
-
-// Click chat icon to open
-chatIcon.addEventListener("click", () => {
-  chatbot.style.display = "flex";
-  chatIcon.style.display = "none";
-  chatInput.focus(); 
-});
-
-// Minimize button click
-chatClose.addEventListener("click", () => {
-  chatbot.style.display = "none";
-  chatIcon.style.display = "block";
-});
-
-// Minimize if user clicks outside chatbot
-document.addEventListener("click", (e) => {
-  const isInside = chatbot.contains(e.target) || chatIcon.contains(e.target);
-  if (!isInside) {
-    chatbot.style.display = "none";
-    chatIcon.style.display = "block";
-  }
-});
-
-// Minimize on scroll
-window.addEventListener("scroll", () => {
-  chatbot.style.display = "none";
-  chatIcon.style.display = "block";
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+  let currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+  let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  applyTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
 });
